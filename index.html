@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>دخول | Aboyounis</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page-center">
+  <div class="card auth-card">
+    <div class="brand">Aboyounis</div>
+
+    <!-- بعد تسجيل الدخول -->
+    <div id="welcome" class="welcome" style="display:none;">
+      <h2 id="welcomeText"></h2>
+      <p class="hint">اضغط متابعة للدخول إلى لوحة التحكم</p>
+      <div class="actions">
+        <!-- ✅ الزر أصبح button مباشر بدون a -->
+        <button class="btn" onclick="location.href='dashboard.html'">متابعة</button>
+        <button class="btn secondary" onclick="logout()">تغيير الحساب</button>
+      </div>
+    </div>
+
+    <!-- نموذج تسجيل الدخول -->
+    <div id="loginFormWrap">
+      <h2>تسجيل الدخول</h2>
+      <form id="loginForm" onsubmit="login(event)">
+        <input id="username" placeholder="اسم المستخدم" required>
+        <input id="password" type="password" placeholder="كلمة المرور" required>
+        <div class="actions">
+          <button class="btn" type="submit">دخول</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
